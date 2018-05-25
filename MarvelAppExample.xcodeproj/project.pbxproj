@@ -12,10 +12,11 @@
 		991F6C3020B83A6E00F0BF27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 991F6C2E20B83A6E00F0BF27 /* Main.storyboard */; };
 		991F6C3220B83A6F00F0BF27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 991F6C3120B83A6F00F0BF27 /* Assets.xcassets */; };
 		991F6C3520B83A6F00F0BF27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 991F6C3320B83A6F00F0BF27 /* LaunchScreen.storyboard */; };
-		991F6C4220B841A600F0BF27 /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 991F6C4120B841A600F0BF27 /* CommonCrypto.framework */; };
-		991F6C4520B849E500F0BF27 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F6C4420B849E500F0BF27 /* Crypto.swift */; };
 		991F6C4720B8515900F0BF27 /* MarvelAPI.plist in Resources */ = {isa = PBXBuildFile; fileRef = 991F6C4620B8515900F0BF27 /* MarvelAPI.plist */; };
 		991F6C4920B8735F00F0BF27 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F6C4820B8735F00F0BF27 /* Utils.swift */; };
+		991F6C4B20B8956700F0BF27 /* Arcane.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 991F6C4A20B8956600F0BF27 /* Arcane.framework */; };
+		991F6C4E20B8965E00F0BF27 /* MarvelServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F6C4D20B8965E00F0BF27 /* MarvelServices.swift */; };
+		991F6C5020B897CA00F0BF27 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 991F6C4F20B897CA00F0BF27 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,10 +27,11 @@
 		991F6C3120B83A6F00F0BF27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		991F6C3420B83A6F00F0BF27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		991F6C3620B83A6F00F0BF27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		991F6C4120B841A600F0BF27 /* CommonCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommonCrypto.framework; path = Carthage/Build/iOS/CommonCrypto.framework; sourceTree = SOURCE_ROOT; };
-		991F6C4420B849E500F0BF27 /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
 		991F6C4620B8515900F0BF27 /* MarvelAPI.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MarvelAPI.plist; sourceTree = "<group>"; };
 		991F6C4820B8735F00F0BF27 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		991F6C4A20B8956600F0BF27 /* Arcane.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Arcane.framework; path = Carthage/Build/iOS/Arcane.framework; sourceTree = SOURCE_ROOT; };
+		991F6C4D20B8965E00F0BF27 /* MarvelServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelServices.swift; sourceTree = "<group>"; };
+		991F6C4F20B897CA00F0BF27 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				991F6C4220B841A600F0BF27 /* CommonCrypto.framework in Frameworks */,
+				991F6C4B20B8956700F0BF27 /* Arcane.framework in Frameworks */,
+				991F6C5020B897CA00F0BF27 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +67,7 @@
 		991F6C2920B83A6E00F0BF27 /* MarvelAppExample */ = {
 			isa = PBXGroup;
 			children = (
+				991F6C4C20B8959600F0BF27 /* API Services */,
 				991F6C2A20B83A6E00F0BF27 /* AppDelegate.swift */,
 				991F6C2C20B83A6E00F0BF27 /* ViewController.swift */,
 				991F6C2E20B83A6E00F0BF27 /* Main.storyboard */,
@@ -71,7 +75,6 @@
 				991F6C3320B83A6F00F0BF27 /* LaunchScreen.storyboard */,
 				991F6C3620B83A6F00F0BF27 /* Info.plist */,
 				991F6C4620B8515900F0BF27 /* MarvelAPI.plist */,
-				991F6C4420B849E500F0BF27 /* Crypto.swift */,
 				991F6C4820B8735F00F0BF27 /* Utils.swift */,
 			);
 			path = MarvelAppExample;
@@ -80,9 +83,18 @@
 		991F6C4020B8418A00F0BF27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				991F6C4120B841A600F0BF27 /* CommonCrypto.framework */,
+				991F6C4F20B897CA00F0BF27 /* Alamofire.framework */,
+				991F6C4A20B8956600F0BF27 /* Arcane.framework */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		991F6C4C20B8959600F0BF27 /* API Services */ = {
+			isa = PBXGroup;
+			children = (
+				991F6C4D20B8965E00F0BF27 /* MarvelServices.swift */,
+			);
+			path = "API Services";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,7 +172,8 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/CommonCrypto.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Arcane.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 			);
 			name = "Carthage Script";
 			outputPaths = (
@@ -176,7 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				991F6C4520B849E500F0BF27 /* Crypto.swift in Sources */,
+				991F6C4E20B8965E00F0BF27 /* MarvelServices.swift in Sources */,
 				991F6C2D20B83A6E00F0BF27 /* ViewController.swift in Sources */,
 				991F6C2B20B83A6E00F0BF27 /* AppDelegate.swift in Sources */,
 				991F6C4920B8735F00F0BF27 /* Utils.swift in Sources */,

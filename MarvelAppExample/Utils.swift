@@ -10,7 +10,7 @@ import Foundation
 
 struct Utils {
     
-    func getValue(fromPlistFile plistFile:String, withKey key:String) -> String? {
+    static func getValue(fromPlistFile plistFile:String, withKey key:String) -> String? {
         guard let path = Bundle.main.path(forResource: plistFile, ofType: "plist") else{
             return nil
         }
