@@ -1,2 +1,4 @@
 github "onmyway133/Arcane"
 github "Alamofire/Alamofire" ~> 4.7
+github "hkellaway/Gloss"
+github "rs/SDWebImage"

@@ -8,30 +8,46 @@
 
 /* Begin PBXBuildFile section */
 		991F6C2B20B83A6E00F0BF27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F6C2A20B83A6E00F0BF27 /* AppDelegate.swift */; };
-		991F6C2D20B83A6E00F0BF27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F6C2C20B83A6E00F0BF27 /* ViewController.swift */; };
+		991F6C2D20B83A6E00F0BF27 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F6C2C20B83A6E00F0BF27 /* CharactersViewController.swift */; };
 		991F6C3020B83A6E00F0BF27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 991F6C2E20B83A6E00F0BF27 /* Main.storyboard */; };
 		991F6C3220B83A6F00F0BF27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 991F6C3120B83A6F00F0BF27 /* Assets.xcassets */; };
 		991F6C3520B83A6F00F0BF27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 991F6C3320B83A6F00F0BF27 /* LaunchScreen.storyboard */; };
 		991F6C4720B8515900F0BF27 /* MarvelAPI.plist in Resources */ = {isa = PBXBuildFile; fileRef = 991F6C4620B8515900F0BF27 /* MarvelAPI.plist */; };
 		991F6C4920B8735F00F0BF27 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F6C4820B8735F00F0BF27 /* Utils.swift */; };
-		991F6C4B20B8956700F0BF27 /* Arcane.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 991F6C4A20B8956600F0BF27 /* Arcane.framework */; };
 		991F6C4E20B8965E00F0BF27 /* MarvelServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F6C4D20B8965E00F0BF27 /* MarvelServices.swift */; };
-		991F6C5020B897CA00F0BF27 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 991F6C4F20B897CA00F0BF27 /* Alamofire.framework */; };
+		CD3FBF2120B98EA40045DFA0 /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3FBF1F20B98EA40045DFA0 /* CharacterTableViewCell.swift */; };
+		CD3FBF2220B98EA40045DFA0 /* CharacterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD3FBF2020B98EA40045DFA0 /* CharacterTableViewCell.xib */; };
+		CD3FBF2920B993730045DFA0 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3FBF2820B993730045DFA0 /* Character.swift */; };
+		CD3FBF2C20B9A2020045DFA0 /* CharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3FBF2B20B9A2020045DFA0 /* CharactersViewModel.swift */; };
+		CD3FBF2E20B9BF500045DFA0 /* CharacterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3FBF2D20B9BF500045DFA0 /* CharacterDetailsViewController.swift */; };
+		CD3FBF3020B9BFCE0045DFA0 /* CharacterDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3FBF2F20B9BFCE0045DFA0 /* CharacterDetailsViewModel.swift */; };
+		CD3FBF3D20B9DDE60045DFA0 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3FBF3920B9DDE50045DFA0 /* SDWebImage.framework */; };
+		CD3FBF3E20B9DDE60045DFA0 /* Arcane.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3FBF3A20B9DDE60045DFA0 /* Arcane.framework */; };
+		CD3FBF3F20B9DDE60045DFA0 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3FBF3B20B9DDE60045DFA0 /* Alamofire.framework */; };
+		CD3FBF4020B9DDE60045DFA0 /* Gloss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3FBF3C20B9DDE60045DFA0 /* Gloss.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		991F6C2720B83A6E00F0BF27 /* MarvelAppExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelAppExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		991F6C2A20B83A6E00F0BF27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		991F6C2C20B83A6E00F0BF27 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		991F6C2C20B83A6E00F0BF27 /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
 		991F6C2F20B83A6E00F0BF27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		991F6C3120B83A6F00F0BF27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		991F6C3420B83A6F00F0BF27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		991F6C3620B83A6F00F0BF27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		991F6C4620B8515900F0BF27 /* MarvelAPI.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MarvelAPI.plist; sourceTree = "<group>"; };
 		991F6C4820B8735F00F0BF27 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		991F6C4A20B8956600F0BF27 /* Arcane.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Arcane.framework; path = Carthage/Build/iOS/Arcane.framework; sourceTree = SOURCE_ROOT; };
 		991F6C4D20B8965E00F0BF27 /* MarvelServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelServices.swift; sourceTree = "<group>"; };
-		991F6C4F20B897CA00F0BF27 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
+		CD3FBF1F20B98EA40045DFA0 /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
+		CD3FBF2020B98EA40045DFA0 /* CharacterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterTableViewCell.xib; sourceTree = "<group>"; };
+		CD3FBF2820B993730045DFA0 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		CD3FBF2B20B9A2020045DFA0 /* CharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModel.swift; sourceTree = "<group>"; };
+		CD3FBF2D20B9BF500045DFA0 /* CharacterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewController.swift; sourceTree = "<group>"; };
+		CD3FBF2F20B9BFCE0045DFA0 /* CharacterDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewModel.swift; sourceTree = "<group>"; };
+		CD3FBF3920B9DDE50045DFA0 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
+		CD3FBF3A20B9DDE60045DFA0 /* Arcane.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Arcane.framework; path = Carthage/Build/iOS/Arcane.framework; sourceTree = "<group>"; };
+		CD3FBF3B20B9DDE60045DFA0 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		CD3FBF3C20B9DDE60045DFA0 /* Gloss.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gloss.framework; path = Carthage/Build/iOS/Gloss.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,8 +55,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				991F6C4B20B8956700F0BF27 /* Arcane.framework in Frameworks */,
-				991F6C5020B897CA00F0BF27 /* Alamofire.framework in Frameworks */,
+				CD3FBF3E20B9DDE60045DFA0 /* Arcane.framework in Frameworks */,
+				CD3FBF3F20B9DDE60045DFA0 /* Alamofire.framework in Frameworks */,
+				CD3FBF3D20B9DDE60045DFA0 /* SDWebImage.framework in Frameworks */,
+				CD3FBF4020B9DDE60045DFA0 /* Gloss.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +69,11 @@
 			isa = PBXGroup;
 			children = (
 				991F6C2920B83A6E00F0BF27 /* MarvelAppExample */,
-				991F6C4020B8418A00F0BF27 /* Frameworks */,
 				991F6C2820B83A6E00F0BF27 /* Products */,
+				CD3FBF3B20B9DDE60045DFA0 /* Alamofire.framework */,
+				CD3FBF3A20B9DDE60045DFA0 /* Arcane.framework */,
+				CD3FBF3C20B9DDE60045DFA0 /* Gloss.framework */,
+				CD3FBF3920B9DDE50045DFA0 /* SDWebImage.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,26 +88,18 @@
 		991F6C2920B83A6E00F0BF27 /* MarvelAppExample */ = {
 			isa = PBXGroup;
 			children = (
+				CD3FBF2A20B9A0F50045DFA0 /* ViewModels */,
+				CD3FBF2720B9935D0045DFA0 /* Model */,
+				CD3FBF2620B9926F0045DFA0 /* ViewControllers */,
+				CD3FBF2320B992070045DFA0 /* View */,
 				991F6C4C20B8959600F0BF27 /* API Services */,
 				991F6C2A20B83A6E00F0BF27 /* AppDelegate.swift */,
-				991F6C2C20B83A6E00F0BF27 /* ViewController.swift */,
-				991F6C2E20B83A6E00F0BF27 /* Main.storyboard */,
 				991F6C3120B83A6F00F0BF27 /* Assets.xcassets */,
-				991F6C3320B83A6F00F0BF27 /* LaunchScreen.storyboard */,
 				991F6C3620B83A6F00F0BF27 /* Info.plist */,
 				991F6C4620B8515900F0BF27 /* MarvelAPI.plist */,
 				991F6C4820B8735F00F0BF27 /* Utils.swift */,
 			);
 			path = MarvelAppExample;
-			sourceTree = "<group>";
-		};
-		991F6C4020B8418A00F0BF27 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				991F6C4F20B897CA00F0BF27 /* Alamofire.framework */,
-				991F6C4A20B8956600F0BF27 /* Arcane.framework */,
-			);
-			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		991F6C4C20B8959600F0BF27 /* API Services */ = {
@@ -95,6 +108,59 @@
 				991F6C4D20B8965E00F0BF27 /* MarvelServices.swift */,
 			);
 			path = "API Services";
+			sourceTree = "<group>";
+		};
+		CD3FBF2320B992070045DFA0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CD3FBF2520B992310045DFA0 /* Storyboards */,
+				CD3FBF2420B992210045DFA0 /* Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CD3FBF2420B992210045DFA0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CD3FBF1F20B98EA40045DFA0 /* CharacterTableViewCell.swift */,
+				CD3FBF2020B98EA40045DFA0 /* CharacterTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		CD3FBF2520B992310045DFA0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				991F6C2E20B83A6E00F0BF27 /* Main.storyboard */,
+				991F6C3320B83A6F00F0BF27 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		CD3FBF2620B9926F0045DFA0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				991F6C2C20B83A6E00F0BF27 /* CharactersViewController.swift */,
+				CD3FBF2D20B9BF500045DFA0 /* CharacterDetailsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CD3FBF2720B9935D0045DFA0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD3FBF2820B993730045DFA0 /* Character.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CD3FBF2A20B9A0F50045DFA0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CD3FBF2B20B9A2020045DFA0 /* CharactersViewModel.swift */,
+				CD3FBF2F20B9BFCE0045DFA0 /* CharacterDetailsViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +224,7 @@
 			files = (
 				991F6C3520B83A6F00F0BF27 /* LaunchScreen.storyboard in Resources */,
 				991F6C3220B83A6F00F0BF27 /* Assets.xcassets in Resources */,
+				CD3FBF2220B98EA40045DFA0 /* CharacterTableViewCell.xib in Resources */,
 				991F6C4720B8515900F0BF27 /* MarvelAPI.plist in Resources */,
 				991F6C3020B83A6E00F0BF27 /* Main.storyboard in Resources */,
 			);
@@ -174,6 +241,8 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Arcane.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Gloss.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SDWebImage.framework",
 			);
 			name = "Carthage Script";
 			outputPaths = (
@@ -190,7 +259,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				991F6C4E20B8965E00F0BF27 /* MarvelServices.swift in Sources */,
-				991F6C2D20B83A6E00F0BF27 /* ViewController.swift in Sources */,
+				CD3FBF2E20B9BF500045DFA0 /* CharacterDetailsViewController.swift in Sources */,
+				CD3FBF2C20B9A2020045DFA0 /* CharactersViewModel.swift in Sources */,
+				991F6C2D20B83A6E00F0BF27 /* CharactersViewController.swift in Sources */,
+				CD3FBF2120B98EA40045DFA0 /* CharacterTableViewCell.swift in Sources */,
+				CD3FBF3020B9BFCE0045DFA0 /* CharacterDetailsViewModel.swift in Sources */,
+				CD3FBF2920B993730045DFA0 /* Character.swift in Sources */,
 				991F6C2B20B83A6E00F0BF27 /* AppDelegate.swift in Sources */,
 				991F6C4920B8735F00F0BF27 /* Utils.swift in Sources */,
 			);
@@ -337,7 +411,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9TVN892NPQ;
+				DEVELOPMENT_TEAM = 2AC5F23QLW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -347,7 +421,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.GabrielSilveira.CustomTabBar.MarvelAppExample;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.GabrielSilveira.MarvelAppExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
@@ -360,7 +436,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9TVN892NPQ;
+				DEVELOPMENT_TEAM = 2AC5F23QLW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -370,7 +446,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.GabrielSilveira.CustomTabBar.MarvelAppExample;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.GabrielSilveira.MarvelAppExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;

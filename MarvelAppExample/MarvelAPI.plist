@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Base URL</key>
-	<string>https://gateway.marvel.com</string>
+	<string>http://gateway.marvel.com</string>
 	<key>Public API Key</key>
 	<string>68364626efcdab8ed9a4fb21e4bb2872</string>
 	<key>Private API Key</key>
