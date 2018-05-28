@@ -29,9 +29,8 @@ class CharactersViewModel: NSObject {
             if let response = response as? JSON {
                 if let results = response["results"] as? [JSON] {
                     for character in results {
-                        if let newCharacter = Character(json: character) {
-                            self.characters.append(newCharacter)
-                        }
+                        let newCharacter = Character(json: character)
+                        self.characters.append(newCharacter)
                     }
                     self.delegate?.didLoadCharacters()
                 }

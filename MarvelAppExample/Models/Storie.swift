@@ -1,28 +1,29 @@
 //
-//  Character.swift
+//  Storie.swift
 //  MarvelAppExample
 //
-//  Created by Gabriel Silveira on 26/05/2018.
+//  Created by Gabriel Silveira on 28/05/2018.
 //  Copyright © 2018 GabrielSilveira. All rights reserved.
 //
 
 import Foundation
 import Gloss
 
-class Character: JSONDecodable {
+class Storie: MarvelCollection {
     
     var id: Int?
-    var name: String?
+    var title: String?
     var description: String?
     var thumbnail: String?
+    var type = MarvelCollectionType.Stories
     
-    required init(json:JSON) {
+    required init(json: JSON) {
         if let id = json["id"] as? Int {
             self.id = id
         }
         
-        if let name = json["name"] as? String {
-            self.name = name
+        if let title = json["title"] as? String {
+            self.title = title
         }
         
         if let description = json["description"] as? String {

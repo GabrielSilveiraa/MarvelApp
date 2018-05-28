@@ -9,14 +9,15 @@
 import Foundation
 import Gloss
 
-class Comic: JSONDecodable {
+class Comic: MarvelCollection {
     
     var id: Int?
     var title: String?
     var description: String?
     var thumbnail: String?
-
-    required init?(json:JSON) {
+    var type = MarvelCollectionType.Comics
+    
+    required init(json:JSON) {
         if let id = json["id"] as? Int {
             self.id = id
         }

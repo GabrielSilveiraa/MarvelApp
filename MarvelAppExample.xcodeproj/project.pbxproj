@@ -25,12 +25,12 @@
 		CD3FBF3E20B9DDE60045DFA0 /* Arcane.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3FBF3A20B9DDE60045DFA0 /* Arcane.framework */; };
 		CD3FBF3F20B9DDE60045DFA0 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3FBF3B20B9DDE60045DFA0 /* Alamofire.framework */; };
 		CD3FBF4020B9DDE60045DFA0 /* Gloss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3FBF3C20B9DDE60045DFA0 /* Gloss.framework */; };
-		CD3FBF4220BB59F70045DFA0 /* ComicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3FBF4120BB59F70045DFA0 /* ComicsViewController.swift */; };
-		CD3FBF4420BB5AE60045DFA0 /* ComicsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3FBF4320BB5AE60045DFA0 /* ComicsViewModel.swift */; };
+		CD3FBF4220BB59F70045DFA0 /* CollectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3FBF4120BB59F70045DFA0 /* CollectionsViewController.swift */; };
+		CD3FBF4420BB5AE60045DFA0 /* MarvelCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3FBF4320BB5AE60045DFA0 /* MarvelCollectionViewModel.swift */; };
 		CD3FBF4620BB5C170045DFA0 /* MarvelServicesCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3FBF4520BB5C170045DFA0 /* MarvelServicesCrypto.swift */; };
 		CD3FBF4820BB5E960045DFA0 /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3FBF4720BB5E960045DFA0 /* Comic.swift */; };
-		CD3FBF4D20BB65730045DFA0 /* ComicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3FBF4B20BB65730045DFA0 /* ComicTableViewCell.swift */; };
-		CD3FBF4E20BB65730045DFA0 /* ComicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD3FBF4C20BB65730045DFA0 /* ComicTableViewCell.xib */; };
+		CD3FBF4D20BB65730045DFA0 /* MarvelGenericTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3FBF4B20BB65730045DFA0 /* MarvelGenericTableViewCell.swift */; };
+		CD3FBF4E20BB65730045DFA0 /* MarvelGenericTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD3FBF4C20BB65730045DFA0 /* MarvelGenericTableViewCell.xib */; };
 		CD3FBF5E20BB8E9C0045DFA0 /* UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3FBF5D20BB8E9C0045DFA0 /* UnitTests.swift */; };
 		CD3FBF5F20BB911E0045DFA0 /* MarvelServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F6C4D20B8965E00F0BF27 /* MarvelServices.swift */; };
 		CD3FBF6120BB92F40045DFA0 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3FBF3B20B9DDE60045DFA0 /* Alamofire.framework */; };
@@ -39,6 +39,13 @@
 		CD3FBF6420BB92FD0045DFA0 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3FBF3920B9DDE50045DFA0 /* SDWebImage.framework */; };
 		CD3FBF6520BB93770045DFA0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F6C4820B8735F00F0BF27 /* Utils.swift */; };
 		CD3FBF6620BB937A0045DFA0 /* MarvelServicesCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3FBF4520BB5C170045DFA0 /* MarvelServicesCrypto.swift */; };
+		CD3FBF7820BC156B0045DFA0 /* Storie.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3FBF7720BC156B0045DFA0 /* Storie.swift */; };
+		CD3FBF7A20BC158F0045DFA0 /* Serie.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3FBF7920BC158F0045DFA0 /* Serie.swift */; };
+		CD3FBF7C20BC15A10045DFA0 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3FBF7B20BC15A10045DFA0 /* Event.swift */; };
+		CD3FBF7E20BC17AD0045DFA0 /* MarvelCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3FBF7D20BC17AD0045DFA0 /* MarvelCollection.swift */; };
+		CD3FBF8220BC270F0045DFA0 /* MarvelCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3FBF7D20BC17AD0045DFA0 /* MarvelCollection.swift */; };
+		CD3FBF8520BC3CA10045DFA0 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3FBF8420BC3CA10045DFA0 /* Colors.swift */; };
+		CD3FBF8820BC4E9F0045DFA0 /* MarvelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3FBF8720BC4E9F0045DFA0 /* MarvelButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,16 +86,22 @@
 		CD3FBF3A20B9DDE60045DFA0 /* Arcane.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Arcane.framework; path = Carthage/Build/iOS/Arcane.framework; sourceTree = "<group>"; };
 		CD3FBF3B20B9DDE60045DFA0 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		CD3FBF3C20B9DDE60045DFA0 /* Gloss.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gloss.framework; path = Carthage/Build/iOS/Gloss.framework; sourceTree = "<group>"; };
-		CD3FBF4120BB59F70045DFA0 /* ComicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsViewController.swift; sourceTree = "<group>"; };
-		CD3FBF4320BB5AE60045DFA0 /* ComicsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsViewModel.swift; sourceTree = "<group>"; };
+		CD3FBF4120BB59F70045DFA0 /* CollectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsViewController.swift; sourceTree = "<group>"; };
+		CD3FBF4320BB5AE60045DFA0 /* MarvelCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCollectionViewModel.swift; sourceTree = "<group>"; };
 		CD3FBF4520BB5C170045DFA0 /* MarvelServicesCrypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelServicesCrypto.swift; sourceTree = "<group>"; };
 		CD3FBF4720BB5E960045DFA0 /* Comic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
-		CD3FBF4B20BB65730045DFA0 /* ComicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicTableViewCell.swift; sourceTree = "<group>"; };
-		CD3FBF4C20BB65730045DFA0 /* ComicTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComicTableViewCell.xib; sourceTree = "<group>"; };
+		CD3FBF4B20BB65730045DFA0 /* MarvelGenericTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelGenericTableViewCell.swift; sourceTree = "<group>"; };
+		CD3FBF4C20BB65730045DFA0 /* MarvelGenericTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarvelGenericTableViewCell.xib; sourceTree = "<group>"; };
 		CD3FBF5320BB8D5C0045DFA0 /* MarvelAppExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelAppExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD3FBF5720BB8D5C0045DFA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD3FBF5D20BB8E9C0045DFA0 /* UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTests.swift; sourceTree = "<group>"; };
 		CD3FBF6D20BB9F940045DFA0 /* MarvelAppExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelAppExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD3FBF7720BC156B0045DFA0 /* Storie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storie.swift; sourceTree = "<group>"; };
+		CD3FBF7920BC158F0045DFA0 /* Serie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serie.swift; sourceTree = "<group>"; };
+		CD3FBF7B20BC15A10045DFA0 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		CD3FBF7D20BC17AD0045DFA0 /* MarvelCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCollection.swift; sourceTree = "<group>"; };
+		CD3FBF8420BC3CA10045DFA0 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		CD3FBF8720BC4E9F0045DFA0 /* MarvelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,14 +165,14 @@
 			children = (
 				CD3FBF2620B9926F0045DFA0 /* ViewControllers */,
 				CD3FBF2A20B9A0F50045DFA0 /* ViewModels */,
-				CD3FBF2320B992070045DFA0 /* View */,
+				CD3FBF2320B992070045DFA0 /* Views */,
 				CD3FBF2720B9935D0045DFA0 /* Models */,
 				991F6C4C20B8959600F0BF27 /* API Services */,
+				CD3FBF8320BC3C830045DFA0 /* Helpers */,
 				991F6C2A20B83A6E00F0BF27 /* AppDelegate.swift */,
 				991F6C3120B83A6F00F0BF27 /* Assets.xcassets */,
 				991F6C3620B83A6F00F0BF27 /* Info.plist */,
 				991F6C4620B8515900F0BF27 /* MarvelAPI.plist */,
-				991F6C4820B8735F00F0BF27 /* Utils.swift */,
 			);
 			path = MarvelAppExample;
 			sourceTree = "<group>";
@@ -173,13 +186,14 @@
 			path = "API Services";
 			sourceTree = "<group>";
 		};
-		CD3FBF2320B992070045DFA0 /* View */ = {
+		CD3FBF2320B992070045DFA0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CD3FBF8620BC4E3D0045DFA0 /* Components */,
 				CD3FBF2520B992310045DFA0 /* Storyboards */,
 				CD3FBF2420B992210045DFA0 /* Cells */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		CD3FBF2420B992210045DFA0 /* Cells */ = {
@@ -187,8 +201,8 @@
 			children = (
 				CD3FBF1F20B98EA40045DFA0 /* CharacterTableViewCell.swift */,
 				CD3FBF2020B98EA40045DFA0 /* CharacterTableViewCell.xib */,
-				CD3FBF4B20BB65730045DFA0 /* ComicTableViewCell.swift */,
-				CD3FBF4C20BB65730045DFA0 /* ComicTableViewCell.xib */,
+				CD3FBF4B20BB65730045DFA0 /* MarvelGenericTableViewCell.swift */,
+				CD3FBF4C20BB65730045DFA0 /* MarvelGenericTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -207,7 +221,7 @@
 			children = (
 				991F6C2C20B83A6E00F0BF27 /* CharactersViewController.swift */,
 				CD3FBF2D20B9BF500045DFA0 /* CharacterDetailsViewController.swift */,
-				CD3FBF4120BB59F70045DFA0 /* ComicsViewController.swift */,
+				CD3FBF4120BB59F70045DFA0 /* CollectionsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -215,8 +229,12 @@
 		CD3FBF2720B9935D0045DFA0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CD3FBF7D20BC17AD0045DFA0 /* MarvelCollection.swift */,
 				CD3FBF2820B993730045DFA0 /* Character.swift */,
 				CD3FBF4720BB5E960045DFA0 /* Comic.swift */,
+				CD3FBF7720BC156B0045DFA0 /* Storie.swift */,
+				CD3FBF7920BC158F0045DFA0 /* Serie.swift */,
+				CD3FBF7B20BC15A10045DFA0 /* Event.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -226,7 +244,7 @@
 			children = (
 				CD3FBF2B20B9A2020045DFA0 /* CharactersViewModel.swift */,
 				CD3FBF2F20B9BFCE0045DFA0 /* CharacterDetailsViewModel.swift */,
-				CD3FBF4320BB5AE60045DFA0 /* ComicsViewModel.swift */,
+				CD3FBF4320BB5AE60045DFA0 /* MarvelCollectionViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -238,6 +256,23 @@
 				CD3FBF5D20BB8E9C0045DFA0 /* UnitTests.swift */,
 			);
 			path = MarvelAppExampleTests;
+			sourceTree = "<group>";
+		};
+		CD3FBF8320BC3C830045DFA0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				991F6C4820B8735F00F0BF27 /* Utils.swift */,
+				CD3FBF8420BC3CA10045DFA0 /* Colors.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CD3FBF8620BC4E3D0045DFA0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				CD3FBF8720BC4E9F0045DFA0 /* MarvelButton.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,7 +386,7 @@
 				CD3FBF2220B98EA40045DFA0 /* CharacterTableViewCell.xib in Resources */,
 				991F6C4720B8515900F0BF27 /* MarvelAPI.plist in Resources */,
 				991F6C3020B83A6E00F0BF27 /* Main.storyboard in Resources */,
-				CD3FBF4E20BB65730045DFA0 /* ComicTableViewCell.xib in Resources */,
+				CD3FBF4E20BB65730045DFA0 /* MarvelGenericTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,17 +434,23 @@
 			files = (
 				991F6C4E20B8965E00F0BF27 /* MarvelServices.swift in Sources */,
 				CD3FBF2E20B9BF500045DFA0 /* CharacterDetailsViewController.swift in Sources */,
-				CD3FBF4220BB59F70045DFA0 /* ComicsViewController.swift in Sources */,
-				CD3FBF4420BB5AE60045DFA0 /* ComicsViewModel.swift in Sources */,
+				CD3FBF4220BB59F70045DFA0 /* CollectionsViewController.swift in Sources */,
+				CD3FBF4420BB5AE60045DFA0 /* MarvelCollectionViewModel.swift in Sources */,
+				CD3FBF8820BC4E9F0045DFA0 /* MarvelButton.swift in Sources */,
+				CD3FBF7820BC156B0045DFA0 /* Storie.swift in Sources */,
 				CD3FBF2C20B9A2020045DFA0 /* CharactersViewModel.swift in Sources */,
 				991F6C2D20B83A6E00F0BF27 /* CharactersViewController.swift in Sources */,
 				CD3FBF2120B98EA40045DFA0 /* CharacterTableViewCell.swift in Sources */,
-				CD3FBF4D20BB65730045DFA0 /* ComicTableViewCell.swift in Sources */,
+				CD3FBF7C20BC15A10045DFA0 /* Event.swift in Sources */,
+				CD3FBF4D20BB65730045DFA0 /* MarvelGenericTableViewCell.swift in Sources */,
 				CD3FBF3020B9BFCE0045DFA0 /* CharacterDetailsViewModel.swift in Sources */,
 				CD3FBF2920B993730045DFA0 /* Character.swift in Sources */,
+				CD3FBF8520BC3CA10045DFA0 /* Colors.swift in Sources */,
+				CD3FBF7E20BC17AD0045DFA0 /* MarvelCollection.swift in Sources */,
 				CD3FBF4820BB5E960045DFA0 /* Comic.swift in Sources */,
 				CD3FBF4620BB5C170045DFA0 /* MarvelServicesCrypto.swift in Sources */,
 				991F6C2B20B83A6E00F0BF27 /* AppDelegate.swift in Sources */,
+				CD3FBF7A20BC158F0045DFA0 /* Serie.swift in Sources */,
 				991F6C4920B8735F00F0BF27 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,6 +462,7 @@
 				CD3FBF5F20BB911E0045DFA0 /* MarvelServices.swift in Sources */,
 				CD3FBF6620BB937A0045DFA0 /* MarvelServicesCrypto.swift in Sources */,
 				CD3FBF5E20BB8E9C0045DFA0 /* UnitTests.swift in Sources */,
+				CD3FBF8220BC270F0045DFA0 /* MarvelCollection.swift in Sources */,
 				CD3FBF6520BB93770045DFA0 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

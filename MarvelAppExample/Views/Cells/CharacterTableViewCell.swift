@@ -13,9 +13,14 @@ class CharacterTableViewCell: UITableViewCell {
     static let nibName = "CharacterTableViewCell"
     static let height = 44
     
-    @IBOutlet weak var characterNameLabel: UILabel!
+    @IBOutlet weak var characterNameLabel: UILabel! {
+        didSet {
+            characterNameLabel.textColor = UIColor.white
+        }
+    }
     
     func configure(withCharacter character:Character) {
         characterNameLabel.text = character.name
+        contentView.backgroundColor = Colors.blackMarvel
     }
 }

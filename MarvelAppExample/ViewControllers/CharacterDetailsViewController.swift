@@ -22,18 +22,35 @@ class CharacterDetailsViewController: UIViewController {
         didSet {
             descriptionLabel.text =
                 viewModel.character.description != "" ? viewModel.character.description : "No description available"
+            descriptionLabel.textColor = UIColor.white
         }
     }
     
-    @IBOutlet weak var comicsButton: UIButton! {
+    @IBOutlet weak var comicsButton: MarvelButton! {
         didSet {
-            comicsButton.addTarget(self, action: #selector(didPressComicsButton), for: .touchDown)
+            comicsButton.tag = MarvelCollectionType.Comics.rawValue
+            comicsButton.addTarget(self, action: #selector(goToCollection), for: .touchDown)
         }
     }
     
-    @IBOutlet weak var seriesButton: UIButton! {
+    @IBOutlet weak var seriesButton: MarvelButton! {
         didSet {
-            seriesButton.addTarget(self, action: #selector(didPressSeriesButton), for: .touchDown)
+            seriesButton.tag = MarvelCollectionType.Series.rawValue
+            seriesButton.addTarget(self, action: #selector(goToCollection), for: .touchDown)
+        }
+    }
+    
+    @IBOutlet weak var storiesButton: MarvelButton! {
+        didSet {
+            storiesButton.tag = MarvelCollectionType.Stories.rawValue
+            storiesButton.addTarget(self, action: #selector(goToCollection), for: .touchDown)
+        }
+    }
+    
+    @IBOutlet weak var eventsButton: MarvelButton! {
+        didSet {
+            eventsButton.tag = MarvelCollectionType.Events.rawValue
+            eventsButton.addTarget(self, action: #selector(goToCollection), for: .touchDown)
         }
     }
     
@@ -61,18 +78,17 @@ class CharacterDetailsViewController: UIViewController {
         self.navigationItem.title = viewModel.character.name
     }
     
-    @objc func didPressComicsButton() {
-        guard let destination = storyboard?.instantiateViewController(withIdentifier: "ComicsViewController") as? ComicsViewController else {
+    @objc func goToCollection(_ sender:UIButton) {
+        
+        guard let destination = storyboard?.instantiateViewController(withIdentifier: "CollectionsViewController") as? CollectionsViewController,
+              let collection = MarvelCollectionType(rawValue: sender.tag) else {
             return
         }
+            
+        let collectionViewModel = MarvelCollectionViewModel(withCharacter: viewModel.character, andCollection: collection)
         
-        let comicsViewModel = ComicsViewModel(withCharacter:viewModel.character)
-        destination.configure(withViewModel: comicsViewModel)
+        destination.configure(withViewModel: collectionViewModel)
         
         navigationController?.pushViewController(destination, animated: true)
-    }
-    
-    @objc func didPressSeriesButton() {
-        
     }
 }

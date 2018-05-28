@@ -59,7 +59,7 @@ class UnitTests: XCTestCase {
         let expec = expectation(description: "Success on getting comics")
         var results:[JSON]?
         
-        MarvelServices.shared.getComics(forCharacterId: 1) { response, error in
+        MarvelServices.shared.getCollection(collection: MarvelCollectionType.Comics, forCharacterId: 1) { response, error in
             if let response = response as? JSON {
                 results = response["results"] as? [JSON]
                 expec.fulfill()
@@ -76,11 +76,74 @@ class UnitTests: XCTestCase {
         XCTAssert(results != nil)
     }
     
-    func testGetComicsServiceWithSuccess2() {
+    func testGetStoriesServiceWithSuccess() {
+        let expec = expectation(description: "Success on getting comics")
+        var results:[JSON]?
+        
+        MarvelServices.shared.getCollection(collection: MarvelCollectionType.Stories, forCharacterId: 1) { response, error in
+            if let response = response as? JSON {
+                results = response["results"] as? [JSON]
+                expec.fulfill()
+            } else {
+                if let error = error {
+                    XCTFail("Error: \(error)")
+                } else {
+                    XCTFail("Error getting stories")
+                }
+            }
+        }
+        
+        waitForExpectations(timeout: 10, handler: nil)
+        XCTAssert(results != nil)
+    }
+    
+    func testGetSeriesServiceWithSuccess() {
+        let expec = expectation(description: "Success on getting comics")
+        var results:[JSON]?
+        
+        MarvelServices.shared.getCollection(collection: MarvelCollectionType.Series, forCharacterId: 1) { response, error in
+            if let response = response as? JSON {
+                results = response["results"] as? [JSON]
+                expec.fulfill()
+            } else {
+                if let error = error {
+                    XCTFail("Error: \(error)")
+                } else {
+                    XCTFail("Error getting series")
+                }
+            }
+        }
+        
+        waitForExpectations(timeout: 10, handler: nil)
+        XCTAssert(results != nil)
+    }
+    
+    func testGetEventsServiceWithSuccess() {
+        let expec = expectation(description: "Success on getting comics")
+        var results:[JSON]?
+        
+        MarvelServices.shared.getCollection(collection: MarvelCollectionType.Events, forCharacterId: 1) { response, error in
+            if let response = response as? JSON {
+                results = response["results"] as? [JSON]
+                expec.fulfill()
+            } else {
+                if let error = error {
+                    XCTFail("Error: \(error)")
+                } else {
+                    XCTFail("Error getting events")
+                }
+            }
+        }
+        
+        waitForExpectations(timeout: 10, handler: nil)
+        XCTAssert(results != nil)
+    }
+    
+    func testErrorOnGetCollectionService() {
         let expec = expectation(description: "Error when id is zero")
         var results: Any?
         
-        MarvelServices.shared.getComics(forCharacterId: 0) { response, error in
+        MarvelServices.shared.getCollection(collection: MarvelCollectionType.Comics, forCharacterId: 0) { response, error in
             results = response
             expec.fulfill()
         }

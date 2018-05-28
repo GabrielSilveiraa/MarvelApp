@@ -49,8 +49,14 @@ class CharactersViewController: UIViewController {
     }
     
     func configureNavigationBar() {
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationItem.title = "Characters"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.title = "Characters"
+        navigationController?.navigationBar.barTintColor = Colors.redMarvel
+        let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+        navigationController?.navigationBar.largeTitleTextAttributes = textAttributes
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
+        navigationController?.navigationBar.tintColor = UIColor.white
+        navigationController?.navigationBar.barStyle = UIBarStyle.black
     }
 }
 
@@ -71,7 +77,6 @@ extension CharactersViewController: UITableViewDataSource {
         
         let character = viewModel.characters[indexPath.row]
         cell.configure(withCharacter: character)
-        
         return cell
     }
     

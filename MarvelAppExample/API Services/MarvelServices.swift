@@ -56,13 +56,15 @@ class MarvelServices: NSObject {
         }
     }
     
-    func getComics(forCharacterId characterId:Int, completion: @escaping (Any?, Error?) -> Void) {
+    func getCollection(collection: MarvelCollectionType, forCharacterId characterId:Int, completion: @escaping (Any?, Error?) -> Void) {
         
         guard let baseUrl = baseUrl, let authentication = MarvelServicesCrypto.getAuthentication() else {
             return
         }
         
-        guard let url = URL(string: "\(baseUrl)/v1/public/characters/\(characterId)/comics?\(authentication)") else {
+        let collectionChosen = collection.toString.lowercased()
+        
+        guard let url = URL(string: "\(baseUrl)/v1/public/characters/\(characterId)/\(collectionChosen)?\(authentication)") else {
             return
         }
         
@@ -81,6 +83,6 @@ class MarvelServices: NSObject {
                 completion(response.result.value, nil)
             }
         }
-        
     }
+    
 }

@@ -26,12 +26,13 @@ struct MarvelServicesCrypto {
         guard let publicKey = publicApiKey, let privateKey = privateApiKey else {
             return nil
         }
-        
+
         let timestamp = Int(NSDate().timeIntervalSince1970)
-        
+
         guard let hash = Hash.MD5("\(timestamp)\(privateKey)\(publicKey)") else {
             return nil
         }
         return "ts=\(timestamp)&apikey=\(publicKey)&hash=\(hash)"
     }
+    
 }
