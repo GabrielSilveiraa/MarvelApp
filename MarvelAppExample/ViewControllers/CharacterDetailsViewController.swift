@@ -18,17 +18,61 @@ class CharacterDetailsViewController: UIViewController {
         }
     }
     
-    private var viewModel:CharacterDetailsViewModel! {
+    @IBOutlet weak var descriptionLabel: UILabel! {
         didSet {
-//            viewModel.dele
+            descriptionLabel.text =
+                viewModel.character.description != "" ? viewModel.character.description : "No description available"
         }
+    }
+    
+    @IBOutlet weak var comicsButton: UIButton! {
+        didSet {
+            comicsButton.addTarget(self, action: #selector(didPressComicsButton), for: .touchDown)
+        }
+    }
+    
+    @IBOutlet weak var seriesButton: UIButton! {
+        didSet {
+            seriesButton.addTarget(self, action: #selector(didPressSeriesButton), for: .touchDown)
+        }
+    }
+    
+    private var viewModel:CharacterDetailsViewModel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureNavigationBar()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationItem.title = ""
     }
     
     func configure(withViewModel viewModel:CharacterDetailsViewModel) {
         self.viewModel = viewModel
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    func configureNavigationBar() {
+        self.navigationItem.title = viewModel.character.name
+    }
+    
+    @objc func didPressComicsButton() {
+        guard let destination = storyboard?.instantiateViewController(withIdentifier: "ComicsViewController") as? ComicsViewController else {
+            return
+        }
+        
+        let comicsViewModel = ComicsViewModel(withCharacter:viewModel.character)
+        destination.configure(withViewModel: comicsViewModel)
+        
+        navigationController?.pushViewController(destination, animated: true)
+    }
+    
+    @objc func didPressSeriesButton() {
+        
     }
 }

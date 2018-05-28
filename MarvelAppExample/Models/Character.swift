@@ -15,10 +15,6 @@ class Character: JSONDecodable {
     var name: String?
     var description: String?
     var thumbnail: String?
-//    var comics: [Comic] = []
-//    var stories: [Storie] = []
-//    var events: [Event] = []
-//    var series: [Serie] = []
     
     required init?(json:JSON) {
         if let id = json["id"] as? Int {

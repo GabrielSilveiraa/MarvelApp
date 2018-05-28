@@ -11,6 +11,7 @@ import UIKit
 class CharacterTableViewCell: UITableViewCell {
 
     static let nibName = "CharacterTableViewCell"
+    static let height = 44
     
     @IBOutlet weak var characterNameLabel: UILabel!
     

@@ -15,25 +15,33 @@ protocol CharactersViewModelDelegate {
 
 class CharactersViewModel: NSObject {
     
-    var characters:[Character]?
+    var characters = [Character]()
     var delegate:CharactersViewModelDelegate?
+    var currentOffset = 0
     
     func loadCharacters() {
-        MarvelServices.shared.getCharacters { response, error in
+        MarvelServices.shared.getCharacters(withOffset: currentOffset) { response, error in
             if let response = response as? JSON {
                 if let results = response["results"] as? [JSON] {
-                    self.characters = [Character]()
                     for character in results {
                         if let newCharacter = Character(json: character) {
-                            self.characters?.append(newCharacter)
+                            self.characters.append(newCharacter)
                         }
                     }
                     self.delegate?.didLoadCharacters()
                 }
             } else {
-                print(error)
+                if let error = error {
+                    print(error)
+                } else {
+                    print("Error when loading characters")
+                }
             }
         }
     }
     
+    func loadMoreCharacters() {
+        currentOffset += 20
+        loadCharacters()
+    }
 }

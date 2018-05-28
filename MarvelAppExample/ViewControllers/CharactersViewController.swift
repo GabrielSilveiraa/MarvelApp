@@ -36,12 +36,17 @@ class CharactersViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        viewModel = CharactersViewModel()
         configureNavigationBar()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationItem.title = ""
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = CharactersViewModel()
     }
     
     func configureNavigationBar() {
@@ -61,18 +66,29 @@ extension CharactersViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "characterTableViewCell") as? CharacterTableViewCell,
-            let character = viewModel.characters?[indexPath.row] else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "characterTableViewCell") as? CharacterTableViewCell else {
             return UITableViewCell()
         }
         
+        let character = viewModel.characters[indexPath.row]
         cell.configure(withCharacter: character)
         
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(CharacterTableViewCell.height)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.characters?.count ?? 0
+        return viewModel.characters.count
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == viewModel.characters.count-4 {
+            activityIndicator.startAnimating()
+            viewModel.loadMoreCharacters()
+        }
     }
 }
 
@@ -80,10 +96,10 @@ extension CharactersViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        guard let destination = storyboard?.instantiateViewController(withIdentifier: "CharacterDetailsViewController") as? CharacterDetailsViewController,
-            let character = viewModel.characters?[indexPath.row] else {
+        guard let destination = storyboard?.instantiateViewController(withIdentifier: "CharacterDetailsViewController") as? CharacterDetailsViewController else {
             return
         }
+        let character = viewModel.characters[indexPath.row]
         destination.configure(withViewModel: CharacterDetailsViewModel(withCharacter: character))
         self.navigationController?.pushViewController(destination, animated: true)
     }
