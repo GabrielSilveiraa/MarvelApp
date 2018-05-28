@@ -17,7 +17,12 @@ class CharactersViewModel: NSObject {
     
     var characters = [Character]()
     var delegate:CharactersViewModelDelegate?
-    var currentOffset = 0
+    private var currentOffset = 0
+    
+    override init() {
+        super.init()
+        loadCharacters()
+    }
     
     func loadCharacters() {
         MarvelServices.shared.getCharacters(withOffset: currentOffset) { response, error in

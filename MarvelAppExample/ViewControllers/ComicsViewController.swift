@@ -69,7 +69,6 @@ extension ComicsViewController: UITableViewDataSource {
         }
         
         cell.configure(withComic: viewModel.comics[indexPath.row])
-//        cell.size
         return cell
     }
     

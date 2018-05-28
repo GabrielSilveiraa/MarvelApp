@@ -65,7 +65,7 @@ class MarvelServices: NSObject {
         guard let url = URL(string: "\(baseUrl)/v1/public/characters/\(characterId)/comics?\(authentication)") else {
             return
         }
-        print(url)
+        
         var urlRequest = URLRequest(url:url)
         urlRequest.httpMethod = HTTPMethod.get.rawValue
         

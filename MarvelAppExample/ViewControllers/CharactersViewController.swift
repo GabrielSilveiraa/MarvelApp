@@ -30,7 +30,6 @@ class CharactersViewController: UIViewController {
     private var viewModel: CharactersViewModel! {
         didSet {
             viewModel.delegate = self
-            viewModel.loadCharacters()
         }
     }
     
