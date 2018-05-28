@@ -20,7 +20,7 @@ Navigate to the root directory of this project in Terminal (the directory that c
 
 Run on terminal:
 ```
-$ carhage update --platform iOS
+$ carthage update --platform iOS
 ```
 
 ### Running the project
