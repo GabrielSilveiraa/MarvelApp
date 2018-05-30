@@ -24,7 +24,7 @@ $ carthage update --platform iOS
 ```
 
 ### Running the project
-Open the .xcworkspace file and run
+Open the .xcodeproj file and run
 
 
 ## Dependencies
